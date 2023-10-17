@@ -50,7 +50,7 @@ class Parser:
          return expr
 
      def term(self) -> Expr:
-         expr: Expr = self.factor()
+         expr: Expr = self.factor() # 5
 
          while self.match(TokenType.MINUS, TokenType.PLUS):
              operator: Token = self.previous()

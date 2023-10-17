@@ -10,5 +10,8 @@ class Unary(Expr):
         self.operator = operator
         self.right = right
 
+    def accept(self, something):
+        pass
+
 if __name__ == "__main__":
     pass
