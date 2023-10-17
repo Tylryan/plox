@@ -53,3 +53,7 @@ class Token:
         self.lexeme = lexeme
         self.literal = literal
         self.line = line
+
+    def __str__(self) -> str:
+        return f"LITERAL: {self.literal}, TYPE: {self.ttype}"
+        
