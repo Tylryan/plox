@@ -4,12 +4,14 @@ from typing import List
 from ast.expressions.expression import Expr
 from ast.printer.ast_printer import AstPrinter
 from ast.tokens.token import Token
+from interpreter import Interpreter
 from parser import Parser
 from scanner import Scanner
 
 
 class Main:
 
+    interpreter: Interpreter = Interpreter()
 
     def main(self):
 
@@ -33,6 +35,9 @@ class Main:
             return
 
         print(AstPrinter().print(expressions))
+
+        self.interpreter.interpret(expressions)
+        
 
         
 if __name__ == "__main__":
